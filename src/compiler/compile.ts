@@ -13,7 +13,7 @@ import getCurrent from "./lib/functions/getCurrent";
 import setCurrent from "./lib/functions/setCurrent";
 import debug from "./lib/functions/debug";
 
-async function compile(code: string, options: Options) {
+export async function compile(code: string, options: Options) {
   if (!validator(code)) {
     throw new Error("Code has a problem");
   }
@@ -83,6 +83,5 @@ async function compile(code: string, options: Options) {
   } else {
     return prettier.format(js);
   }
-}
+};
 
-export default compile;

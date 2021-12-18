@@ -1,9 +1,13 @@
 {
   "name": "superbrain",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.js",
+  "bin": {
+    "minify": "dist/bin/minify.js",
+    "compile": "dist/bin/compile.js"
+  },
   "scripts": {
     "build": "tsc",
     "start": "npm run build && node dist/index.js"
